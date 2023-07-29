@@ -1,10 +1,13 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 5000;
-const mongo = process.env.MONGO_URL || 'mongodb+srv://admin:fakeaccount@cluster0.3drtzkl.mongodb.net/crud1?retryWrites=true&w=majority';
+const mongo = process.env.MONGO_URL;
 
 app.use(cors());
 app.use(express.json());
