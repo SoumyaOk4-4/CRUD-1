@@ -7,7 +7,7 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 5000;
-const mongo = process.env.MONGO_URL;
+const mongo = process.env.MONGO_URL|| "mongodb+srv://soumya:1234@cluster0.y20d7vp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 app.use(cors());
 app.use(express.json());
@@ -23,7 +23,7 @@ const schemaData = mongoose.Schema({
 });
 
 //model
-const userModel = mongoose.model("user", schemaData);
+const userModel = mongoose.model("people-test", schemaData);
 
 //api
 ///read 
