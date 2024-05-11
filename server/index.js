@@ -63,7 +63,7 @@ app.delete("/delete/:id", async (req, res) => {
 //db connection
 mongoose.connect(mongo)
     .then(() => {
-        console.log(`db connected`);
+        console.log(`db connected...`);
         app.listen(port, () => {
             console.log(`server running on http://localhost:${port}`);
         });
